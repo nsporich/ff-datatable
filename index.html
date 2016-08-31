@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="https://cdn.datatables.net/1.10.7/js/jquery.dataTables.min.js"></script>
+
+
+<h2>Power Rankings <small>- Draft Day</small></h2>
+<table id="example" class="striped">
+<thead><tr><th>Rank</th><th>Team</th><th>Score</th><th>QB</th><th>RB</th><th>WR</th><th>FLX</th><th>TE</th><th>K</th><th>DST</th></tr></thead>
+<tbody>
+<tr><td>1</td><td>Team Gregory</td><td>100.0%</td>			<td>3</td><td>11</td><td>1</td><td>3</td><td>8</td><td>3</td><td>9</td></tr>
+<tr><td>2</td><td>Spos Before Hos</td><td>99.0%</td>		<td>9</td><td>13</td><td>2</td><td>1</td><td>3</td><td>4</td><td>2</td></tr>
+<tr><td>3</td><td>Team Cudykier</td><td>95.5%</td>			<td>11</td><td>5</td><td>5</td><td>8</td><td>7</td><td>2</td><td>4</td></tr>
+<tr><td>4</td><td>Cool Hand Lou</td><td>94.8%</td>			<td>10</td><td>3</td><td>7</td><td>7</td><td>12</td><td>13</td><td>12</td></tr>
+<tr><td>5</td><td>Deflate Deez Nutz</td><td>93.9%</td>		<td>8</td><td>12</td><td>3</td><td>6</td><td>13</td><td>7</td><td>9</td></tr>
+<tr><td>6</td><td>Team Force</td><td>93.3%</td>				<td>6</td><td>4</td><td>8</td><td>4</td><td>11</td><td>11</td><td>6</td></tr>
+<tr><td>7</td><td>SFV Aguilar</td><td>93.3%</td>			<td>5</td><td>9</td><td>12</td><td>11</td><td>1</td><td>12</td><td>14</td></tr>
+<tr><td>8</td><td>SUPERMAX RULES!</td><td>92.3%</td>		<td>13</td><td>7</td><td>9</td><td>5</td><td>2</td><td>6</td><td>7</td></tr>
+<tr><td>9</td><td>Gurley Gone Wild</td><td>92.2%</td>		<td>7</td><td>2</td><td>10</td><td>10</td><td>9</td><td>9</td><td>3</td></tr>
+<tr><td>10</td><td>Team Thomas</td><td>89.2%</td>			<td>2</td><td>14</td><td>4</td><td>2</td><td>5</td><td>5</td><td>8</td></tr>
+<tr><td>11</td><td>Team Frisch</td><td>88.7%</td>			<td>4</td><td>6</td><td>13</td><td>13</td><td>6</td><td>8</td><td>5</td></tr>
+<tr><td>12</td><td>Little Miss Moffett</td><td>88.2%</td>	<td>1</td><td>10</td><td>11</td><td>12</td><td>14</td><td>1</td><td>1</td></tr>
+<tr><td>13</td><td>OhNo RoMo</td><td>86.4%</td>				<td>14</td><td>8</td><td>6</td><td>9</td><td>4</td><td>10</td><td>9</td></tr>
+<tr><td>14</td><td>Team Wasserman</td><td>79.6%</td>		<td>12</td><td>1</td><td>14</td><td>14</td><td>10</td><td>13</td><td>13</td></tr>
+</tbody>
+</table>
+
+<script>
+$(document).ready(function() {
+  $('#example').dataTable({
+    "iDisplayLength": 14,
+    "bPaginate": false,
+    "bFilter": false,
+    "bLengthChange": false
+  } );
+});
+</script>
