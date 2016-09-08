@@ -17,7 +17,7 @@
 
 <script>
 $(function(){
-  $('#draft').csv2table('./csv/draft.csv',{
+  $('#draft').csv2table('https://cdn.rawgit.com/nsporich/ff-datatable/master/csv/draft.csv',{
      onload : function(id,op,data,ary){
         $('tr:even','#'+id).css('background','#f6f6f6')
      } 
@@ -31,7 +31,7 @@ $(function(){
 
 <script>
 $(function(){
-  $('#week1').csv2table('./csv/week1.csv',{
+  $('#week1').csv2table('https://cdn.rawgit.com/nsporich/ff-datatable/master/csv/week1.csv',{
      onload : function(id,op,data,ary){
         $('tr:even','#'+id).css('background','#f6f6f6')
      } 
