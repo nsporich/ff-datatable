@@ -28,7 +28,7 @@ $(function(){
 });
 </script>
 
-<div id="tab-2" class="tab-content current">
+<div id="tab-2" class="tab-content">
 <div id="week1"></div>
 </div>
 
@@ -54,13 +54,13 @@ $(function(){
 
 
 
-<div id="tab-5" class="tab-content">
+<div id="tab-5" class="tab-content current">
 <div id="week4"></div>
 </div>
 
 <script>
 $(function(){
-  $('#week4').csv2table('https://cdn.rawgit.com/nsporich/ff-datatable/master/csv/week4.csv',{
+  $('#week4').csv2table('https://rawgit.com/nsporich/ff-datatable/master/csv/week4.csv',{
      onload : function(id,op,data,ary){
         $('tr:even','#'+id).css('background','#f6f6f6')
      } 
