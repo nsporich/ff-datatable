@@ -8,7 +8,10 @@
 
 <ul class="tabs">
 <li class="tab-link" data-tab="tab-1">Draft</li>
-<li class="tab-link current" data-tab="tab-2">Week 1</li>
+<li class="tab-link" data-tab="tab-2">Week 1</li>
+<li class="tab-link" data-tab="tab-3">Week 2</li>
+<li class="tab-link" data-tab="tab-4">Week 3</li>
+<li class="tab-link current" data-tab="tab-5">Week 4</li>
 </ul>
 
 <div id="tab-1" class="tab-content">
@@ -39,6 +42,31 @@ $(function(){
 });
 </script>
 
+<div id="tab-3" class="tab-content">
+<div id="week2">Data Unavailable</div>
+</div>
+
+<div id="tab-4" class="tab-content">
+<div id="week3">Data Unavailable</div>
+</div>
+
+
+
+
+
+<div id="tab-5" class="tab-content">
+<div id="week4"></div>
+</div>
+
+<script>
+$(function(){
+  $('#week4').csv2table('https://cdn.rawgit.com/nsporich/ff-datatable/master/csv/week4.csv',{
+     onload : function(id,op,data,ary){
+        $('tr:even','#'+id).css('background','#f6f6f6')
+     } 
+   });
+});
+</script>
 
 <script>
 $(document).ready(function(){
