@@ -11,7 +11,8 @@
 <li class="tab-link" data-tab="tab-2">Week 1</li>
 <li class="tab-link" data-tab="tab-3">Week 2</li>
 <li class="tab-link" data-tab="tab-4">Week 3</li>
-<li class="tab-link current" data-tab="tab-5">Week 4</li>
+<li class="tab-link" data-tab="tab-5">Week 4</li>
+<li class="tab-link current" data-tab="tab-6">Week 5</li>
 </ul>
 
 <div id="tab-1" class="tab-content">
@@ -50,17 +51,27 @@ $(function(){
 <div id="week3">Data Unavailable</div>
 </div>
 
-
-
-
-
-<div id="tab-5" class="tab-content current">
+<div id="tab-5" class="tab-content">
 <div id="week4"></div>
 </div>
 
 <script>
 $(function(){
   $('#week4').csv2table('https://rawgit.com/nsporich/ff-datatable/master/csv/week4.csv',{
+     onload : function(id,op,data,ary){
+        $('tr:even','#'+id).css('background','#f6f6f6')
+     } 
+   });
+});
+</script>
+
+<div id="tab-6" class="tab-content current">
+<div id="week5"></div>
+</div>
+
+<script>
+$(function(){
+  $('#week5').csv2table('https://rawgit.com/nsporich/ff-datatable/master/csv/week5.csv',{
      onload : function(id,op,data,ary){
         $('tr:even','#'+id).css('background','#f6f6f6')
      } 
