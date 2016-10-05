@@ -68,3 +68,6 @@ table {
 	font-family: 'Open Sans', sans-serif;
 	text-align: center!important;
 }
+p.updated {
+	font-size: 12px;
+}
