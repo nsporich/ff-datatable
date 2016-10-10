@@ -2,6 +2,11 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="https://cdn.rawgit.com/toshirot/csv2table/master/js/jquery.csv2table-0.02-b-4.8.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+
+<div id="container" style="height: 600px"></div>
 
 <h3>Power Rankings</h3>
 <p class="updated">Updated 10/5/2016 10:00AM</p>
@@ -89,4 +94,82 @@ $(document).ready(function(){
     $("#"+tab_id).addClass('current');
   })
 })
+</script>
+
+<br />
+
+<script>
+  $(function () {
+    $('#container').highcharts({
+        title: {
+            text: 'Weekly Scores by Team',
+            x: -20 //center
+        },
+        xAxis: {
+            categories: ['Week 1','Week 2', 'Week 3', 'Week 4'],
+        },
+        yAxis: {
+            title: {
+                text: 'Weekly Score'
+            },
+            plotLines: [{
+                value: 0,
+                width: 1,
+                color: '#808080'
+            }]
+        },
+        tooltip: {
+            valueSuffix: 'Points'
+        },
+        legend: {
+            layout: 'vertical',
+            align: 'right',
+            verticalAlign: 'middle',
+            borderWidth: 0
+        },
+        series: [{
+            name: 'Spos Before Hos',
+            data: [117, 123.8, 130.1, 117.5]
+        }, {
+            name: 'Little Miss Moffett',
+            data: [82.6, 78.4, 99.6, 131.1]
+        }, {
+            name: 'SUPERMAX LOCO',
+            data: [73.4, 101.2, 88.3, 88.5]
+        }, {
+            name: 'Team Thomas',
+            data: [112, 122.6, 80.9, 88.3]
+        }, {
+            name: 'Gurley Gone Wild',
+            data: [111.5, 132.4, 67.2, 78.7]
+        }, {
+            name: 'Deflate Deez Nutz',
+            data: [124.9, 101.8, 61.1, 123]
+        }, {
+            name: 'Team Gregory',
+            data: [161.4, 77.8, 110.7, 88.1]
+        }, {
+            name: 'Team Wasserman',
+            data: [83.9, 84.1, 102.4, 117.8]
+        }, {
+            name: 'SFV Aguilar',
+            data: [90.6, 54.7, 132.4, 84.4]
+        }, {
+            name: 'Team Frisch',
+            data: [130.4, 98.3, 103.3, 79.6]
+        }, {
+            name: 'OhNo RoMo',
+            data: [110.8, 94.6, 136.8, 95.8]
+        }, {
+            name: 'Cool Hand Lou',
+            data: [108.2, 95.3, 100.8, 101.2]
+        }, {
+            name: 'Hebrew Wolves',
+            data: [78.7, 98.8, 109.6, 103.7]
+        }, {
+            name: 'Team Force',
+            data: [92.6, 72.8, 108.7, 110.6]
+        }]
+    });
+});
 </script>
