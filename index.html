@@ -122,10 +122,18 @@ $(document).ready(function(){
             valueSuffix: 'Points'
         },
         legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle',
-            borderWidth: 0
+            layout: 'horizontal',
+            align: 'center',
+            verticalAlign: 'bottom',
+            borderWidth: 0,
+            itemDistance: 60,
+            itemWidth: 300,
+            title: {
+                text: 'Teams<br/><span style="font-size: 9px; color: #666; font-weight: normal">(Click to hide)</span>',
+                style: {
+                    fontStyle: 'italic'
+                }
+            },
         },
         series: [{
             name: 'Spos Before Hos',
