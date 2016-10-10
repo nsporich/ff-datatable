@@ -103,10 +103,16 @@ $(document).ready(function(){
     $('#container').highcharts({
         title: {
             text: 'Weekly Scores by Team',
-            x: -20 //center
+            x: -20 //center,
+        },
+        subtitle: {
+                text: '<a href="https://nsporich.github.io/ff-datatable/">Click for Large View</a>',
+                x: -20 //center,
         },
         xAxis: {
             categories: ['Week 1','Week 2', 'Week 3', 'Week 4'],
+            maxPadding:0,
+            minPadding:0
         },
         yAxis: {
             title: {
@@ -116,7 +122,10 @@ $(document).ready(function(){
                 value: 0,
                 width: 1,
                 color: '#808080'
-            }]
+            }],
+            maxPadding:0,
+            minPadding:0,
+            align: 'left'
         },
         tooltip: {
             valueSuffix: 'Points'
@@ -129,7 +138,7 @@ $(document).ready(function(){
             itemDistance: 60,
             itemWidth: 300,
             title: {
-                text: 'Teams<br/><span style="font-size: 9px; color: #666; font-weight: normal">(Click to hide)</span>',
+                text: 'Teams<br/><span style="font-size: 9px; color: #666; font-weight: normal">(Click to show/hide)</span>',
                 style: {
                     fontStyle: 'italic'
                 }
@@ -137,46 +146,60 @@ $(document).ready(function(){
         },
         series: [{
             name: 'Spos Before Hos',
-            data: [117, 123.8, 130.1, 117.5]
+            data: [117, 123.8, 130.1, 117.5],
+            visible: false
         }, {
             name: 'Little Miss Moffett',
-            data: [82.6, 78.4, 99.6, 131.1]
+            data: [82.6, 78.4, 99.6, 131.1],
+            visible: false
         }, {
             name: 'SUPERMAX LOCO',
-            data: [73.4, 101.2, 88.3, 88.5]
+            data: [73.4, 101.2, 88.3, 88.5],
+            visible: false
         }, {
             name: 'Team Thomas',
-            data: [112, 122.6, 80.9, 88.3]
+            data: [112, 122.6, 80.9, 88.3],
+            visible: false
         }, {
             name: 'Gurley Gone Wild',
-            data: [111.5, 132.4, 67.2, 78.7]
+            data: [111.5, 132.4, 67.2, 78.7],
+            visible: false
         }, {
             name: 'Deflate Deez Nutz',
-            data: [124.9, 101.8, 61.1, 123]
+            data: [124.9, 101.8, 61.1, 123],
+            visible: false
         }, {
             name: 'Team Gregory',
-            data: [161.4, 77.8, 110.7, 88.1]
+            data: [161.4, 77.8, 110.7, 88.1],
+            visible: false
         }, {
             name: 'Team Wasserman',
-            data: [83.9, 84.1, 102.4, 117.8]
+            data: [83.9, 84.1, 102.4, 117.8],
+            visible: false
         }, {
             name: 'SFV Aguilar',
-            data: [90.6, 54.7, 132.4, 84.4]
+            data: [90.6, 54.7, 132.4, 84.4],
+            visible: false
         }, {
             name: 'Team Frisch',
-            data: [130.4, 98.3, 103.3, 79.6]
+            data: [130.4, 98.3, 103.3, 79.6],
+            visible: false
         }, {
             name: 'OhNo RoMo',
-            data: [110.8, 94.6, 136.8, 95.8]
+            data: [110.8, 94.6, 136.8, 95.8],
+            visible: false
         }, {
             name: 'Cool Hand Lou',
-            data: [108.2, 95.3, 100.8, 101.2]
+            data: [108.2, 95.3, 100.8, 101.2],
+            visible: false
         }, {
             name: 'Hebrew Wolves',
-            data: [78.7, 98.8, 109.6, 103.7]
+            data: [78.7, 98.8, 109.6, 103.7],
+            visible: false
         }, {
             name: 'Team Force',
-            data: [92.6, 72.8, 108.7, 110.6]
+            data: [92.6, 72.8, 108.7, 110.6],
+            visible: false
         }]
     });
 });
