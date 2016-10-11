@@ -69,13 +69,27 @@ $(function(){
 });
 </script>
 
-<div id="tab-6" class="tab-content current">
+<div id="tab-6" class="tab-content">
 <div id="week5"></div>
 </div>
 
 <script>
 $(function(){
   $('#week5').csv2table('https://rawgit.com/nsporich/ff-datatable/master/csv/week5.csv',{
+     onload : function(id,op,data,ary){
+        $('tr:even','#'+id).css('background','#f6f6f6')
+     } 
+   });
+});
+</script>
+
+<div id="tab-7" class="tab-content current">
+<div id="week6"></div>
+</div>
+
+<script>
+$(function(){
+  $('#week5').csv2table('https://rawgit.com/nsporich/ff-datatable/master/csv/week6.csv',{
      onload : function(id,op,data,ary){
         $('tr:even','#'+id).css('background','#f6f6f6')
      } 
@@ -107,7 +121,7 @@ $(document).ready(function(){
             x: -20 //center,
         },
         xAxis: {
-            categories: ['Week 1','Week 2', 'Week 3', 'Week 4'],
+            categories: ['Week 1','Week 2', 'Week 3', 'Week 4', 'Week 5'],
             maxPadding:0,
             minPadding:0
         },
@@ -143,59 +157,59 @@ $(document).ready(function(){
         },
         series: [{
             name: 'Spos Before Hos',
-            data: [117, 123.8, 130.1, 117.5],
+            data: [117, 123.8, 130.1, 117.5, 111.4],
             visible: false
         }, {
             name: 'Little Miss Moffett',
-            data: [82.6, 78.4, 99.6, 131.1],
+            data: [82.6, 78.4, 99.6, 131.1, 60.6],
             visible: false
         }, {
             name: 'SUPERMAX LOCO',
-            data: [73.4, 101.2, 88.3, 88.5],
+            data: [73.4, 101.2, 88.3, 88.5, 64.4],
             visible: false
         }, {
             name: 'Team Thomas',
-            data: [112, 122.6, 80.9, 88.3],
+            data: [112, 122.6, 80.9, 88.3, 91.8],
             visible: false
         }, {
             name: 'Gurley Gone Wild',
-            data: [111.5, 132.4, 67.2, 78.7],
+            data: [111.5, 132.4, 67.2, 78.7, 98.4],
             visible: false
         }, {
             name: 'Deflate Deez Nutz',
-            data: [124.9, 101.8, 61.1, 123],
+            data: [124.9, 101.8, 61.1, 123, 73.2],
             visible: false
         }, {
             name: 'Team Gregory',
-            data: [161.4, 77.8, 110.7, 88.1],
+            data: [161.4, 77.8, 110.7, 88.1, 92.7],
             visible: false
         }, {
             name: 'Team Wasserman',
-            data: [83.9, 84.1, 102.4, 117.8],
+            data: [83.9, 84.1, 102.4, 117.8, 108.7],
             visible: false
         }, {
             name: 'SFV Aguilar',
-            data: [90.6, 54.7, 132.4, 84.4],
+            data: [90.6, 54.7, 132.4, 84.4, 143.9],
             visible: false
         }, {
             name: 'Team Frisch',
-            data: [130.4, 98.3, 103.3, 79.6],
+            data: [130.4, 98.3, 103.3, 79.6, 115.4],
             visible: false
         }, {
             name: 'OhNo RoMo',
-            data: [110.8, 94.6, 136.8, 95.8],
+            data: [110.8, 94.6, 136.8, 95.8, 85.6],
             visible: false
         }, {
             name: 'Cool Hand Lou',
-            data: [108.2, 95.3, 100.8, 101.2],
+            data: [108.2, 95.3, 100.8, 101.2, 109.4],
             visible: false
         }, {
             name: 'Hebrew Wolves',
-            data: [78.7, 98.8, 109.6, 103.7],
+            data: [78.7, 98.8, 109.6, 103.7, 98.9],
             visible: false
         }, {
             name: 'Team Force',
-            data: [92.6, 72.8, 108.7, 110.6],
+            data: [92.6, 72.8, 108.7, 110.6, 102.6],
             visible: false
         }]
     });
