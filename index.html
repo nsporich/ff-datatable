@@ -8,7 +8,7 @@
 
 
 <h3>Power Rankings</h3>
-<p class="updated">Updated 10/11/2016 10:00AM</p>
+<p class="updated">Updated 10/19/2016 11:00AM</p>
 
 <ul class="tabs">
 <li class="tab-link" data-tab="tab-1">Draft</li>
@@ -17,7 +17,8 @@
 <li class="tab-link" data-tab="tab-4">Week 3</li>
 <li class="tab-link" data-tab="tab-5">Week 4</li>
 <li class="tab-link" data-tab="tab-6">Week 5</li>
-<li class="tab-link current" data-tab="tab-7">Week 6</li>
+<li class="tab-link" data-tab="tab-7">Week 6</li>
+<li class="tab-link current" data-tab="tab-8">Week 7</li>
 </ul>
 
 <div id="tab-1" class="tab-content">
@@ -84,13 +85,27 @@ $(function(){
 });
 </script>
 
-<div id="tab-7" class="tab-content current">
+<div id="tab-7" class="tab-content">
 <div id="week6"></div>
 </div>
 
 <script>
 $(function(){
   $('#week6').csv2table('https://rawgit.com/nsporich/ff-datatable/master/csv/week6.csv',{
+     onload : function(id,op,data,ary){
+        $('tr:even','#'+id).css('background','#f6f6f6')
+     } 
+   });
+});
+</script>
+
+<div id="tab-8" class="tab-content current">
+<div id="week7"></div>
+</div>
+
+<script>
+$(function(){
+  $('#week7').csv2table('https://rawgit.com/nsporich/ff-datatable/master/csv/week7.csv',{
      onload : function(id,op,data,ary){
         $('tr:even','#'+id).css('background','#f6f6f6')
      } 
@@ -122,7 +137,7 @@ $(document).ready(function(){
             x: -20 //center,
         },
         xAxis: {
-            categories: ['Week 1','Week 2', 'Week 3', 'Week 4', 'Week 5'],
+            categories: ['Week 1','Week 2', 'Week 3', 'Week 4', 'Week 5', 'Week 6'],
             maxPadding:0,
             minPadding:0
         },
@@ -158,59 +173,59 @@ $(document).ready(function(){
         },
         series: [{
             name: 'Spos Before Hos',
-            data: [117, 123.8, 130.1, 117.5, 111.4],
+            data: [117, 123.8, 130.1, 117.5, 111.4, 122.9],
             visible: false
         }, {
             name: 'Little Miss Moffett',
-            data: [82.6, 78.4, 99.6, 131.1, 60.6],
+            data: [82.6, 78.4, 99.6, 131.1, 60.6, 112.8],
             visible: false
         }, {
             name: 'SUPERMAX LOCO',
-            data: [73.4, 101.2, 88.3, 88.5, 64.4],
+            data: [73.4, 101.2, 88.3, 88.5, 64.4, 85.5],
             visible: false
         }, {
             name: 'Team Thomas',
-            data: [112, 122.6, 80.9, 88.3, 91.8],
+            data: [112, 122.6, 80.9, 88.3, 91.8, 83.3],
             visible: false
         }, {
             name: 'Gurley Gone Wild',
-            data: [111.5, 132.4, 67.2, 78.7, 98.4],
+            data: [111.5, 132.4, 67.2, 78.7, 98.4, 95.7],
             visible: false
         }, {
             name: 'Deflate Deez Nutz',
-            data: [124.9, 101.8, 61.1, 123, 73.2],
+            data: [124.9, 101.8, 61.1, 123, 73.2, 97.8],
             visible: false
         }, {
             name: 'Team Gregory',
-            data: [161.4, 77.8, 110.7, 88.1, 92.7],
+            data: [161.4, 77.8, 110.7, 88.1, 92.7, 113.7],
             visible: false
         }, {
             name: 'Team Wasserman',
-            data: [83.9, 84.1, 102.4, 117.8, 108.7],
+            data: [83.9, 84.1, 102.4, 117.8, 108.7, 125.7],
             visible: false
         }, {
             name: 'SFV Aguilar',
-            data: [90.6, 54.7, 132.4, 84.4, 143.9],
+            data: [90.6, 54.7, 132.4, 84.4, 143.9, 91.3],
             visible: false
         }, {
             name: 'Team Frisch',
-            data: [130.4, 98.3, 103.3, 79.6, 115.4],
+            data: [130.4, 98.3, 103.3, 79.6, 115.4, 134.1],
             visible: false
         }, {
             name: 'OhNo RoMo',
-            data: [110.8, 94.6, 136.8, 95.8, 85.6],
+            data: [110.8, 94.6, 136.8, 95.8, 85.6, 104.6],
             visible: false
         }, {
             name: 'Cool Hand Lou',
-            data: [108.2, 95.3, 100.8, 101.2, 109.4],
+            data: [108.2, 95.3, 100.8, 101.2, 109.4, 73.9],
             visible: false
         }, {
             name: 'Hebrew Wolves',
-            data: [78.7, 98.8, 109.6, 103.7, 98.9],
+            data: [78.7, 98.8, 109.6, 103.7, 98.9, 82.7],
             visible: false
         }, {
             name: 'Team Force',
-            data: [92.6, 72.8, 108.7, 110.6, 102.6],
+            data: [92.6, 72.8, 108.7, 110.6, 102.6, 64.4],
             visible: false
         }]
     });
